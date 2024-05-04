@@ -1,0 +1,67 @@
+
+  
+  .backgroundForButton {
+    background-image: url('https://i.pinimg.com/originals/ce/6f/7f/ce6f7ffd885e477efa2110437ab779dd.gif'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 65vh;
+  }
+  .logo{
+    position: absolute;
+    left: 2%;
+    top:2%;
+    width:9vw;
+    img{
+      width:100%;
+    }
+  }
+
+  .container:hover{
+    cursor: pointer;
+    scale: 1.2;
+    background-color: yellow;
+  }
+
+  .iconButton {
+    margin-right: 8px;
+  }
+  
+  .TypeWriter{
+    color:white;
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    top: 15vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    .logo{
+        width:20vw;
+    }
+    .TypeWriter{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 243px) {
+    .container{
+      padding: 5;
+      font-size: 10px;
+    }
+  }

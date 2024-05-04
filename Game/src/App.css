@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+
+
+body{
+  background-color: #FF4C4C;
+  font-family: "Happy Monkey", system-ui;
+  color:white;
+  margin: 0;
+  padding: 0;
+}
+
+.main-div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 15vh; */
+}
+
+.background{
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.game-heading{
+  padding:5px 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 30px;
+  color: black;
+}
+
+.square-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.right-side{
+   height: 30px;
+   width:100%;
+   font-family: sans-serif;
+   font-size: 18px;
+   background-color: red;
+   align-items: center;
+   display: flex;
+   /* border-bottom-left-radius: 50px;
+   border-top-right-radius: 50px; */
+   justify-content: center;
+}
+.left-side {
+  height: 50px;
+  width:10vw;
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: red;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.move-detection{
+  display: flex;
+  justify-content: space-between;
+}
+
+.finished-state{
+  font-size: 30px;
+  padding:0;
+  margin:0;
+  color:yellow;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+.waiting-message {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.waiting-text {
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+
+.current-move-circle{
+  background-color: blue !important;
+  width: 100% !important;
+}
+
+.current-move-cross{
+  background-color: red !important;
+}
+
+.gameBox{
+  display: flex;
+  align-items: center;
+  height:25vh;
+  justify-content: space-around;
+}
+/* 
+.curr_player h1,.Opponent_player h1{
+  font-size: 20px;
+} */
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .gameBox{
+    justify-content: space-between;
+    column-gap: 40px;
+  }
+  .curr_player h1,.Opponent_player h1{
+    font-size: 16px;
+  }
+  .current-move-circle{
+    padding: 4;
+  }
+  .right-side,.left-side{
+    height: 25px;
+    width:100%;
+    font-size: 14px;
+ }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .gameBox{
+    justify-content: space-around;
+    column-gap: 80px;
+  }
+  .finished-state{
+    font-size: 20px;
+  }
+  .curr_player h1,.Opponent_player h1{
+    font-size: 14px;
+  }
+  .current-move-circle,.current-move-cross{
+    padding: 0;
+  }
+  .curr_player{
+    flex-direction: column;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+  }
+  .Opponent_player{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+  }
+  .right-side,.left-side{
+    height: 20px;
+    width:100%;
+    /* margin-top: 18px; */
+    font-size: 12px;
+ }
+ .right-side{
+  padding-left: 3.5px;
+  padding-right: 3.5px;
+ }
+  
+}
+
+@media screen and (max-width: 282px) {
+  .waiting-text{
+    font-size: 20px;
+  }
+  .curr_player h1,.Opponent_player h1{
+    font-size: 10px;
+  }
+  .current-move-circle,.current-move-cross{
+    padding: 0;
+  }
+  .right-side,.left-side{
+    height: 16px;
+    width:100%;
+    font-size: 9px;
+ }
+}
