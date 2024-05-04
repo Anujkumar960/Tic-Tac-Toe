@@ -36,7 +36,6 @@ export const StartButton = ({ setPlayerName,playOnline,opponentName,setPlayOnlin
         setPlayerName(user);
         setPlayOnline(prev=>!prev);
         
-
         //setting connection with backend
         const newSocket= io("https://tic-tac-toe-3jq3.onrender.com/",{
          autoConnect:true,

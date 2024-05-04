@@ -3,9 +3,12 @@ const { Server } = require("socket.io");
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: "https://nodejs-tic-tac-toe.netlify.app/",
+  cors: {
+    origin: "https://nodejs-tic-tac-toe.netlify.app",
+    methods: ["GET", "POST"],
+    credentials: true
+  }
 });
-
 const allUsers = {};
 const allRooms = [];
 
