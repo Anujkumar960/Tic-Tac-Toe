@@ -1,10 +1,19 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+const cors = require("cors");
 
-const httpServer = createServer();
+const app = require('express')();
+
+const httpServer = createServer(app);
+app.use(cors({
+  origin: '*',
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: '*',
     methods: ["GET", "POST"],
     credentials: true
   }
