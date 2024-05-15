@@ -35,9 +35,9 @@ export const StartButton = ({ setPlayerName,playOnline,opponentName,setPlayOnlin
         }
         setPlayerName(user);
         setPlayOnline(prev=>!prev);
-        const apiUrl = import.meta.env.VITE_API_URL;
+        
         //setting connection with backend
-        const newSocket= io(apiUrl,{
+        const newSocket= io("https://tic-tac-toe-3jq3.onrender.com",{
          autoConnect:true,
        })
 
