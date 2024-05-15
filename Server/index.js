@@ -6,14 +6,14 @@ const app = require('express')();
 
 const httpServer = createServer(app);
 app.use(cors({
-  origin: '*',
+  origin: 'https://super-panda-502fd3.netlify.app/',
   methods: ["GET", "POST"],
   credentials: true
 }));
 
 const io = new Server(httpServer, {
   cors: {
-    origin: '*',
+    origin: 'https://super-panda-502fd3.netlify.app/',
     methods: ["GET", "POST"],
     credentials: true
   }
